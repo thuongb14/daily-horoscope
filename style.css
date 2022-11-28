@@ -103,7 +103,7 @@ p {
   max-width: 800px;
   text-align: center;
   color: rgb(131, 131, 131);
-  margin: 0;
+  margin: 1rem 0 1rem;
 }
 
 .hidden {
@@ -120,6 +120,7 @@ p {
 
 .info {
   width: 180px;
+  height: 80px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
