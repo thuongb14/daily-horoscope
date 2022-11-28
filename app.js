@@ -63,7 +63,6 @@ const allSigns = [
 
 const result = document.querySelector('.daily-results');
 const list = document.querySelector('ul');
-
 allSigns.forEach((sign, index) => {
   list.insertAdjacentHTML(
     'beforeend',
@@ -80,15 +79,15 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   document.querySelectorAll('input[type=radio]').forEach((item) => {
     if (item.checked) {
+      let day = e.submitter.value
       let signValue = item.value;
-      console.log(signValue);
-      getDailyHoroscope(signValue);
+      getDailyHoroscope(signValue, day);
     }
   });
 });
 
-function getDailyHoroscope(sign) {
-  const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=today`;
+function getDailyHoroscope(sign, day) {
+  const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=${day}`;
   console.log();
   fetch(URL, {
     method: 'POST',

@@ -18,6 +18,13 @@ h2, h4 {
   color: #404969
 }
 
+.submit-button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
 form {
   display: flex;
   flex-flow: column nowrap;
